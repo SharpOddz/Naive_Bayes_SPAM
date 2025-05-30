@@ -17,21 +17,21 @@ struggling with precision (71%) and misclassifying a good portion of the not spa
 the recall (96%) is great with only misclassifying a small portion as not spam. Naive bayes
 assumes all features are independent but that’s most likely not the case for this dataset, examples
 of this are listed:
-● Word frequency, some of these words are likely to be used together. [! and FREE] ,
+
+-  Word frequency, some of these words are likely to be used together. [! and FREE] ,
 [Business, Addresses]
-● Capital letter, the three features that describe usage of capital letters are all relatively
+-  Capital letter, the three features that describe usage of capital letters are all relatively
 similar. If you have a high longest_capital_run_length then you will probably also have a
 relatively high capital_run_length_average.
+
 In spite of the some of the features being non-independent, Naive bayes still does well in a few
 different ways:
-● Large difference between the classes. There are a large number of features where the
+- Large difference between the classes. There are a large number of features where the
 spam and non-spam mean difference is very large [Capital letter length]
-
-○ Easy for the model to pick up on which way to predict if it knows the feature is
+- Easy for the model to pick up on which way to predict if it knows the feature is
 clearly closer to a certain class and even more so if it is outside of 2-3 STDEVS
 from the other class for a specific feature
-
-● Large number of features. Having 57 features does help overshadow the few features that
+- Large number of features. Having 57 features does help overshadow the few features that
 might not be independent.
 
 For the same reason the Naive Bayes model does good it also does poorly. The features where
